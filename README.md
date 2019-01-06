@@ -2,6 +2,6 @@
 
 No olvidar
 
-´´´
+```
 npm install
-´´´
+```
