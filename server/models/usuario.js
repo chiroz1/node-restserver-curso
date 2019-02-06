@@ -11,7 +11,7 @@ let Schema = mongoose.Schema;
 let usuarioSchema = new Schema({
     nombre: {
         type: String,
-        require: [true, 'El nombre es necesario'] //al hacerlo de esta manera mandamos el mensaje en español o como queramos
+        required: [true, 'El nombre es necesario'] //al hacerlo de esta manera mandamos el mensaje en español o como queramos
     },
     email: {
         type: String,

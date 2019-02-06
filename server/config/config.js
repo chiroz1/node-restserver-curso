@@ -11,6 +11,28 @@ process.env.PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 //==============
+// VENCIMIENTO DEL TOKEN
+//==============
+//60 segundos
+//60 minutos
+//24 horas
+//30 días
+
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+
+//==============
+// SEED DE AUTENTICACIÓN
+//==============
+let seed;
+if (process.env.NODE_ENV === 'dev') {
+    seed = 'este-es-el-seed-desarrollo'; //local
+} else {
+    seed = process.env.SEED; //remota
+}
+
+process.env.SEED = seed;
+
+//==============
 // BASE DE DATOS
 //==============
 
